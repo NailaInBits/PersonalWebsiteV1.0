@@ -1,6 +1,13 @@
 body {
 	background-color: #F8FBFD;
+	display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
+
+main {
+    flex: 1 0 auto;
+  }
 
 .title {
 	font-family: 'Bungee Shade', cursive;
@@ -9,7 +16,7 @@ body {
 	padding-top: 10px;
 }
 
-.blogL {
+.blogLink {
 	font-family: 'Bungee Inline', cursive;
 	font-size: large;
 	text-decoration: underline;
@@ -18,27 +25,35 @@ body {
 	transform: rotate(90deg);
 }
 
-.about {
+.aboutLink {
 	grid-area: about;
 	font-family: 'Bungee Inline', cursive;
-	font-size: small;
+	font-size: xx-small;
 	text-decoration: underline;
 	color: #E35B5D;
 }
 
-.aboutB {
+.aboutBody {
 	font-family: 'Inconsolata', monospace;
-	font-size: larger;
-	text-align: center;
+	font-size: xx-large;
+	text-align: left;
 }
 
-ul {
+#socialLinks {
 	grid-area: links;
 	list-style-type: none;
+	padding: 90px;
+}
+
+.circular--square {
+  border-top-left-radius: 50% 50%;
+  border-top-right-radius: 50% 50%;
+  border-bottom-right-radius: 50% 50%;
+  border-bottom-left-radius: 50% 50%;
 }
 
 .type-wrap {
-	font-family: 'Bungee', cursive;
+	font-family: 'Inconsolata', monospace;
 	font-size: xx-large;
 	font-style: bold;
 	text-align: right;
@@ -65,4 +80,13 @@ ul {
     0% { opacity:1; }
     50% { opacity:0; }
     100% { opacity:1; }
+}
+
+.page-footer {
+	position:absolute;
+	position:fixed;
+	left:0px;
+	bottom:0px;
+	height: 50px;
+	width:100%;
 }
