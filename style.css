@@ -1,0 +1,68 @@
+body {
+	background-color: #F8FBFD;
+}
+
+.title {
+	font-family: 'Bungee Shade', cursive;
+	font-size: xx-large;
+	text-align: center;
+	padding-top: 10px;
+}
+
+.blogL {
+	font-family: 'Bungee Inline', cursive;
+	font-size: large;
+	text-decoration: underline;
+	text-align: right;
+	color: #FAFD4F;
+	transform: rotate(90deg);
+}
+
+.about {
+	grid-area: about;
+	font-family: 'Bungee Inline', cursive;
+	font-size: small;
+	text-decoration: underline;
+	color: #E35B5D;
+}
+
+.aboutB {
+	font-family: 'Inconsolata', monospace;
+	font-size: larger;
+	text-align: center;
+}
+
+ul {
+	grid-area: links;
+	list-style-type: none;
+}
+
+.type-wrap {
+	font-family: 'Bungee', cursive;
+	font-size: xx-large;
+	font-style: bold;
+	text-align: right;
+	padding-right: 200px;
+}
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
