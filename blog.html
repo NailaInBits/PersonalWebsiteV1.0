@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hello.</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+
+		<link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Bungee+Shade|Inconsolata" rel="stylesheet">
+
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		<!-- Get jQuery -->
+	    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	    <script src="js/typed.js" type="text/javascript"></script>
+	    <script>
+	    $(function(){
+	        $("#typed").typed({
+	            stringsElement: $('#typed-strings'),
+	            typeSpeed: 50,
+	            backDelay: 2000,
+	            loop: true,
+	            contentType: 'html', // or text
+	            // defaults to false for infinite loop
+	            loopCount: false,
+	            callback: function(){ foo(); },
+	            resetCallback: function() { newTyped(); }
+	        });
+	        $(".reset").click(function(){
+	            $("#typed").typed('reset');
+	        });
+	    });
+	    function newTyped(){ /* A new typed object */ }
+	    function foo(){ console.log("Callback"); }
+		</script>
+
+		<style>
+        /* code for animated blinking cursor */
+        .typed-cursor{
+            opacity: 1;
+            font-weight: 100;
+            -webkit-animation: blink 0.7s infinite;
+            -moz-animation: blink 0.7s infinite;
+            -ms-animation: blink 0.7s infinite;
+            -o-animation: blink 0.7s infinite;
+            animation: blink 0.7s infinite;
+        }
+        @-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-webkit-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-moz-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-ms-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-o-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+    	</style>
+	</head>
+
+	<body>
+		<div class="row 1">
+			<div class="title">
+				<h1> Nishat Anjum  </h1> 
+			</div>
+		</div>
+
+		<div class="row 2">
+
+			<div class="col s6">
+				<img style="width:700px; height: 450px; padding-left: 50px;" " src="/Users/nishat/website/images/bio.jpg">
+			</div>
+
+			<div class="col s6">
+				<div style="text-decoration:none;" class="item aboutLink"> 
+					<h2> "The Blog is currently under construction. Coming soon: Winter 2016"</h2>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="row 3">
+			<div class="title">
+				<a href="https://nishata.github.io/website/"> Return Home </a>
+			</div>
+		</div>
+
+		<footer class="page-footer">
+            <div style="text-align: center;">
+            © 2016 Naila  
+            </div>
+        </footer>
+            
+
+	</body>
+</html>
