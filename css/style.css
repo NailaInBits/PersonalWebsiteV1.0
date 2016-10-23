@@ -1,13 +1,13 @@
 body {
 	background-color: #F8FBFD;
 	display: flex;
-    min-height: 100vh;
-    flex-direction: column;
+	min-height: 100vh;
+	flex-direction: column;
 }
 
 main {
-    flex: 1 0 auto;
-  }
+	flex: 1 0 auto;
+}
 
 .title {
 	font-family: 'Bungee Shade', cursive;
@@ -35,7 +35,7 @@ main {
 
 .aboutBody {
 	font-family: 'Inconsolata', monospace;
-	font-size: larger;
+	font-size: x-large;
 	text-align: center;
 }
 
@@ -46,10 +46,10 @@ main {
 }
 
 .circular--square {
-  border-top-left-radius: 50% 50%;
-  border-top-right-radius: 50% 50%;
-  border-bottom-right-radius: 50% 50%;
-  border-bottom-left-radius: 50% 50%;
+	border-top-left-radius: 50% 50%;
+	border-top-right-radius: 50% 50%;
+	border-bottom-right-radius: 50% 50%;
+	border-bottom-left-radius: 50% 50%;
 }
 
 .type-wrap {
@@ -60,26 +60,29 @@ main {
 	padding-right: 200px;
 }
 
-.typed-cursor{
-    opacity: 1;
-    -webkit-animation: blink 0.7s infinite;
-    -moz-animation: blink 0.7s infinite;
-    animation: blink 0.7s infinite;
+.typed-cursor {
+	opacity: 1;
+	-webkit-animation: blink 0.7s infinite;
+	-moz-animation: blink 0.7s infinite;
+	animation: blink 0.7s infinite;
 }
-@keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+
+@keyframes blink {
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
 }
-@-webkit-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+
+@-webkit-keyframes blink {
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
 }
-@-moz-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+
+@-moz-keyframes blink {
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
 }
 
 .page-footer {
