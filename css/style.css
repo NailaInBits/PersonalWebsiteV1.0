@@ -269,7 +269,7 @@ figure.overlay:hover p.description, figure.overlay:hover p.icon-links a {
 
 .slider__navi {
   position: absolute;
-  top: 85%;
+  bottom: 0%;
   right: 20px;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
