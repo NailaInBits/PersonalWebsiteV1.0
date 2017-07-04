@@ -1,7 +1,8 @@
 body {
 	background-color: #F8FBFD;
-	display: flex;
 	flex-direction: column;
+	min-height: 100vh;
+	position: relative;
 }
 
 main {
@@ -268,7 +269,7 @@ figure.overlay:hover p.description, figure.overlay:hover p.icon-links a {
 
 .slider__navi {
   position: absolute;
-  top: 250%;
+  top: 85%;
   right: 20px;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
@@ -518,10 +519,8 @@ figure.overlay:hover p.description, figure.overlay:hover p.icon-links a {
   opacity: 0;
 }
 
-footer {
-	position: relative;
-	left: 0px;
-	bottom: 0px;
+.page-footer {
+	position: absolute;
 	width: 100%;
 	height: 50px;
 	z-index: 10;
