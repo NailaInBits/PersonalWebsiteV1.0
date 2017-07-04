@@ -12,6 +12,7 @@
 		<script src="jquery-2.1.4.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
           	<script src="http://rcodonnell.github.io/code4hr-voting/src/js/typed.js"></script>
+		 <script src="js/main.min.js" defer></script>
 
 		<link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Bungee+Shade|Inconsolata" rel="stylesheet">
 
@@ -46,7 +47,9 @@
 		function foo(){ console.log("Callback"); }
 		</script>
 	</head>
+
 	<body>
+	<main>
 		<div class="row 1">
 			<div class="title">
 				<h1> <a href="http://nishatanjum.me" style= "color: black;"> Nishat Anjum  </a> </h1>
@@ -229,107 +232,159 @@
 			</div>
 		</div>
 
-		<div class="row 12">
-			<div class="col s4 grid">
-			<div class="card">
-				<figure class="overlay">
-				<div class="card-image">
-					<img src="images/BWBT.png">
+		<!-- Row 12 utilizes pieces of code from Pham Mikun (@mikun) -->
+		<div class = "row 12" style="height: 60vh">
+			<div class="col s12">
+				<div class="slider__warpper">
+
+					<div class="flex__container flex--gray flex--active" data-slide="1">
+						<div class="flex__item flex__item--left">
+							<div class="flex__content">
+								<a class="waves-effect waves-light btn deep-purple lighten-4" href="https://docs.google.com/presentation/d/1rKUMWVFqeyx9FgwzsEI4ZvAnHsHeVrrFbDPmiXHmn0s/edit">Pitch Deck</a>
+								<p class="text--sub">CUNY Startups Accelerator</p>
+								<h1 class="text--big">DayDay</h1>
+								<p class="text--normal">Our startup pitch. After graduating from the accelerator we were awarded another investment.</p>
+							</div>
+							<p class="text__background">DayDay</p>
+						</div>
+						<div class="flex__item flex__item--right"></div>
+						<iframe class="etc_img" width="560" height="315" style="margin-top: 110px" 
+							src="https://www.youtube.com/embed/8A0U96kTRPM" frameborder="0" allowfullscreen>
+						</iframe>
+					</div>
+
+					<div class="flex__container flex--yellow animate--start" data-slide="2">
+						<div class="flex__item flex__item--left">
+							<div class="flex__content">
+								<a class="waves-effect waves-light btn deep-purple lighten-4" href="https://twitter.com/i/moments/805565422607204352">Twitter Moment</a>
+								<p class="text--sub">Organized a Women in Tech Conference</p>
+								<h1 class="text--big">BWBT</h1>
+								<p class="text--normal">As Vice President of the WiCS club on my campus, I helped put together the Bold Women Bold Tech conference in celebration of women's history month.</p>
+							</div>
+							<p class="text__background">BWBT</p>
+						</div>
+						<div class="flex__item flex__item--right"></div>
+						<img class="etc_img" src="images/BWBT.png" />
+					</div>
+
+					<div class="flex__container flex--blue animate--start" data-slide="3">
+						<div class="flex__item flex__item--left">
+							<div class="flex__content">
+								<a class="waves-effect waves-light btn deep-purple lighten-4" href="https://github.com/NailaInBits/WePlay">Git Repo</a>
+								<p class="text--sub">National Semi-Finalist Microsft Imagine Cup 2017</p>
+								<h1 class="text--big">WePlay</h1>
+								<p class="text--normal">Our app [WePlay] became a National Semi-Finalist in the Microsft Imagine Cup 2017.</p>
+							</div>
+							<p class="text__background">WePlay</p>
+						</div>
+						<div class="flex__item flex__item--right"></div>
+						<img class="etc_img" src="images/imagineCup.png" />
+					</div>
+
+					<div class="flex__container flex--green animate--start" data-slide="4">
+						<div class="flex__item flex__item--left">
+							<div class="flex__content">
+								<a class="waves-effect waves-light btn deep-purple lighten-4" href="http://daydayapp.io/">Website</a>
+								<p class="text--sub">CUNY Startups Accelerator</p>
+								<h1 class="text--big">Accelerator</h1>
+								<p class="text--normal">My startup was awarded a prototyping grant and we were accepted into the CUNY Startups Accelerator.</p>
+							</div>
+							<p class="text__background">Accelerator</p>
+						</div>
+						<div class="flex__item flex__item--right"></div>
+						<img class="etc_img" src="images/cunyStartup.png" />
+					</div>
+
+					<div class="flex__container flex--periwinkle animate--start" data-slide="5">
+					<div class="flex__item flex__item--left">
+						<div class="flex__content">
+							<p class="text--sub">Tech Inclusion</p>
+							<h1 class="text--big">Clarifai</h1>
+							<p class="text--normal">I got featured on Clarifai's instagram for my thoughts on diversity and tech inclusion.</p>
+						</div>
+						<p class="text__background">Clarifai</p>
+					</div>
+					<div class="flex__item flex__item--right"></div>
+						<img class="etc_img" src="images/clarifai.jpg" />
+					</div>
+					
+					<div class="flex__container flex--pink animate--start" data-slide="6">
+						<div class="flex__item flex__item--left">
+							<div class="flex__content">
+								<a class="waves-effect waves-light btn deep-purple lighten-4" href="https://technical.ly/baltimore/2016/11/07/technica-female-hackathon-projects/?utm_content=bufferede18&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer">Article Link</a>
+								<p class="text--sub">Femfeed: An empathy based code review site.</p>
+								<h1 class="text--big">Technica</h1>
+								<p class="text--normal">My team and I were featured in Technical.ly for our project at Technica.</p>
+							</div>
+							<p class="text__background">Technica</p>
+						</div>
+						<div class="flex__item flex__item--right"></div>
+						<img class="etc_img" src="images/technica.jpg" />
+					</div>
+				
+					<div class="flex__container flex--red animate--start" data-slide="7">
+					<div class="flex__item flex__item--left">
+						<div class="flex__content">
+							<a class="waves-effect waves-light btn deep-purple lighten-4" href="https://github.com/nishata/CUNYBuzzBot">Git Repo</a>
+							<p class="text--sub">CUNY Hackathon: A Messenger Bot</p>
+							<h1 class="text--big">Messenger Bot</h1>
+							<p class="text--normal">My teammate and I presenting our messenger bot at the CUNY Hackathon 2016.</p>
+						</div>
+						<p class="text__background">Bot</p>
+					</div>
+					<div class="flex__item flex__item--right"></div>
+						<img class="etc_img" src="images/cunyHack.png" />
+					</div>
 				</div>
-					<figcaption>
-						<p class="description">As Vice President of the WiCS club on my campus I helped put together the Bold Women Bold Tech conference in celebration of women's history month. <br> <br>
-						<a class="waves-effect waves-light btn deep-purple lighten-4" href="https://twitter.com/i/moments/805565422607204352">Twitter Moment</a>
-						</p>
-					</figcaption>
-				</figure>
-			</div>
-			</div>
 
-			<div class="col s4 grid">
-			<div class="card">
-				<figure class="overlay">
-				<div class="card-image">
-					<img src="images/technica.jpg">
+				<div class="slider__navi">
+					<a href="#" class="slide-nav active" data-slide="1">gray</a>
+					<a href="#" class="slide-nav" data-slide="2">yellow</a>
+					<a href="#" class="slide-nav" data-slide="3">blue</a>
+					<a href="#" class="slide-nav" data-slide="4">green</a>
+					<a href="#" class="slide-nav" data-slide="5">periwinkle</a>
+					<a href="#" class="slide-nav" data-slide="6">pink</a>
+					<a href="#" class="slide-nav" data-slide="7">red</a>
 				</div>
-					<figcaption>
-						<p class="description">My team and I were featured in Technical.ly for our project at Technica. <br> <br>
-
-						<a class="waves-effect waves-light btn deep-purple lighten-4" href="https://technical.ly/baltimore/2016/11/07/technica-female-hackathon-projects/?utm_content=bufferede18&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer">Article Link</a></p>
-					</figcaption>
-				</figure>
 			</div>
-			</div>
-
-			<div class="col s4 grid">
-			<div class="card">
-				<figure class="overlay">
-				<div class="card-image">
-					<img src="images/clarifai.jpg">
-				</div>
-					<figcaption>
-						<p class="description">I got featured on Clarifai's instagram for my thoughts on diversity and tech inclusion.
-
-					</figcaption>
-				</figure>
-			</div>
-			</div>
-
-			<div class="col s4 grid">
-			<div class="card">
-				<figure class="overlay">
-				<div class="card-image">
-					<img src="images/cunyHack.jpg">
-				</div>
-					<figcaption>
-						<p class="description">My teammate and I presenting our messenger bot at the CUNY Hackathon 2016
-							<br> <br>
-						<a class="waves-effect waves-light btn deep-purple lighten-4" href="https://github.com/nishata/CUNYBuzzBot">Git Repo</a>
-					</figcaption>
-				</figure>
-			</div>
-			</div>
-
-			<div class="col s4 grid">
-			<div class="card">
-				<figure class="overlay">
-				<div class="card-image">
-					<img src="images/cunyStartup.png">
-				</div>
-					<figcaption>
-						<p class="description">My startup was awarded a prototyping grant and we were accepted into CUNY Startups.
-							<br> <br>
-						<a class="waves-effect waves-light btn deep-purple lighten-4" href="http://daydayapp.io/">Website</a>
-					</figcaption>
-				</figure>
-			</div>
-			</div>
-
-			<div class="col s4 grid">
-			<div class="card">
-				<figure class="overlay">
-				<div class="card-image">
-					<img src="images/imagineCup.jpg">
-				</div>
-					<figcaption>
-						<p class="description">My app [WePlay] became a National semi-finalist in the Microsft Imagine Cup 2017.
-							<br> <br>
-						<a class="waves-effect waves-light btn deep-purple lighten-4" href="https://github.com/NailaInBits/WePlay">Git Repo</a> <br> <br>
-					</figcaption>
-				</figure>
-			</div>
-			</div>
-
 		</div>
 
-		<div class="row 13">
-		</div>
-		<div class="row 14">
-		</div>
+		<script type="text/javascript">
+			$(".slide-nav").on("click", function(e) {
+				e.preventDefault();
+				// get current slide
+				var current = $(".flex--active").data("slide"),
+				// get button data-slide
+				next = $(this).data("slide");
 
-		<footer class="page-footer  indigo lighten-2">
-			<div style="text-align: center;">
-			© 2016 Naila
-			</div>
-		</footer>
+				$(".slide-nav").removeClass("active");
+				$(this).addClass("active");
+
+				if (current === next) {
+					return false;
+				} else {
+					$(".slider__warpper")
+					.find(".flex__container[data-slide=" + next + "]")
+					.addClass("flex--preStart");
+				    $(".flex--active").addClass("animate--end");
+					setTimeout(function() {
+						$(".flex--preStart")
+						.removeClass("animate--start flex--preStart")
+						.addClass("flex--active");
+						$(".animate--end")
+						.addClass("animate--start")
+						.removeClass("animate--end flex--active");
+					}, 800);
+				}
+			});
+		</script>
 	</body>
+	</main>
+
+	<footer class="page-footer  blue lighten-4">
+		<div style="text-align: center;">
+			© 2017 Naila
+		</div>
+	</footer>
+	
 </html>
