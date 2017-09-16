@@ -1,34 +1,7 @@
-// The MIT License (MIT)
-
 // Typed.js | Copyright (c) 2016 Matt Boldt | www.mattboldt.com
-
-// Permission is hereby granted, free of charge, to any person obtaining a copy
-// of this software and associated documentation files (the "Software"), to deal
-// in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-// copies of the Software, and to permit persons to whom the Software is
-// furnished to do so, subject to the following conditions:
-
-// The above copyright notice and this permission notice shall be included in
-// all copies or substantial portions of the Software.
-
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-// THE SOFTWARE.
-
-
-
-
 ! function($) {
-
 	"use strict";
-
 	var Typed = function(el, options) {
-
 		// chosen element to manipulate text
 		this.el = $(el);
 
@@ -98,9 +71,7 @@
 	};
 
 	Typed.prototype = {
-
 		constructor: Typed,
-
 		init: function() {
 			// begin the loop w/ first current string (global self.strings)
 			// current string will be passed as an argument each time after this
@@ -213,13 +184,11 @@
 							if (self.loop === false || self.curLoop === self.loopCount)
 								return;
 						}
-
 						self.timeout = setTimeout(function() {
 							self.backspace(curString, curStrPos);
 						}, self.backDelay);
 
 					} else {
-
 						/* call before functions if applicable */
 						if (curStrPos === 0) {
 							self.options.preStringTyped(self.arrayPos);
@@ -247,10 +216,8 @@
 					}
 					// end of character pause
 				}, charPause);
-
 				// humanized value for typing
 			}, humanize);
-
 		},
 
 		backspace: function(curString, curStrPos) {
@@ -265,7 +232,6 @@
 			var self = this;
 
 			self.timeout = setTimeout(function() {
-
 				// ----- this part is optional ----- //
 				// check string array position
 				// on the first string, only delete one word
@@ -331,10 +297,8 @@
 					} else
 						self.typewrite(self.strings[self.sequence[self.arrayPos]], curStrPos);
 				}
-
 				// humanized value for typing
 			}, humanize);
-
 		},
 		/**
 		 * Shuffles the numbers in the given array.
@@ -353,14 +317,12 @@
 		},
 
 		// Start & Stop currently not working
-
 		// , stop: function() {
 		//     var self = this;
 
 		//     self.stop = true;
 		//     clearInterval(self.timeout);
 		// }
-
 		// , start: function() {
 		//     var self = this;
 		//     if(self.stop === false)
@@ -369,7 +331,6 @@
 		//     this.stop = false;
 		//     this.init();
 		// }
-
 		// Reset and rebuild the element
 		reset: function() {
 			var self = this;
@@ -385,7 +346,6 @@
 			// Send the callback
 			this.options.resetCallback();
 		}
-
 	};
 
 	$.fn.typed = function(option) {
@@ -433,71 +393,64 @@
 		// callback for reset
 		resetCallback: function() {}
 	};
-
-
 }(window.jQuery);
 
+// Etc.me slider
 $("#slideshow > div:gt(0)").hide();
 
 setInterval(function() { 
-  $('#slideshow > div:first')
-    .fadeOut(1000)
-    .next()
-    .fadeIn(1000)
-    .end()
-    .appendTo('#slideshow');
-},  3000);
+	$('#slideshow > div:first')
+		.fadeOut(1000)
+		.next()
+		.fadeIn(1000)
+		.end()
+		.appendTo('#slideshow');
+},	3000);
 
 jQuery(document).ready(function($) {
-  $("#checkbox").change(function() {
-    setInterval(function() {
-      moveRight();
-    }, 3000);
-  });
+	$("#checkbox").change(function() {
+		setInterval(function() {
+			moveRight();
+		}, 3000);
+	});
 
-  var slideCount = $("#slider ul li").length;
-  var slideWidth = $("#slider ul li").width();
-  var slideHeight = $("#slider ul li").height();
-  var sliderUlWidth = slideCount * slideWidth;
+	var slideCount = $("#slider ul li").length;
+	var slideWidth = $("#slider ul li").width();
+	var slideHeight = $("#slider ul li").height();
+	var sliderUlWidth = slideCount * slideWidth;
 
-  $("#slider").css({ width: slideWidth, height: slideHeight });
+	$("#slider").css({ width: slideWidth, height: slideHeight });
+	$("#slider ul").css({ width: sliderUlWidth, marginLeft: -slideWidth });
+	$("#slider ul li:last-child").prependTo("#slider ul");
 
-  $("#slider ul").css({ width: sliderUlWidth, marginLeft: -slideWidth });
+	function moveLeft() {
+		$("#slider ul").animate( {
+			left: +slideWidth
+		},
+		200,
+		function() {
+			$("#slider ul li:last-child").prependTo("#slider ul");
+			$("#slider ul").css("left", "");
+		});
+	}
 
-  $("#slider ul li:last-child").prependTo("#slider ul");
+	function moveRight() {
+		$("#slider ul").animate( {
+			left: -slideWidth
+		},
+		200,
+		function() {
+			$("#slider ul li:first-child").appendTo("#slider ul");
+			$("#slider ul").css("left", "");
+		});
+	}
 
-  function moveLeft() {
-    $("#slider ul").animate(
-      {
-        left: +slideWidth
-      },
-      200,
-      function() {
-        $("#slider ul li:last-child").prependTo("#slider ul");
-        $("#slider ul").css("left", "");
-      }
-    );
-  }
+	$("a.control_prev").click(function() {
+		moveLeft();
+	});
 
-  function moveRight() {
-    $("#slider ul").animate(
-      {
-        left: -slideWidth
-      },
-      200,
-      function() {
-        $("#slider ul li:first-child").appendTo("#slider ul");
-        $("#slider ul").css("left", "");
-      }
-    );
-  }
-
-  $("a.control_prev").click(function() {
-    moveLeft();
-  });
-
-  $("a.control_next").click(function() {
-    moveRight();
-  });
+	$("a.control_next").click(function() {
+		moveRight();
+	});
 });
 

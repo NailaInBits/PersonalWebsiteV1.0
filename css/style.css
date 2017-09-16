@@ -25,6 +25,14 @@ main {
 	transform: rotate(90deg);
 }
 
+@media only screen and (max-width: 900px) {
+	.blogLink {
+		transform: rotate(0deg);
+		text-align: center;
+		font-size: medium;
+	}
+}
+
 .aboutLink {
 	grid-area: about;
 	font-family: 'Bungee Inline', cursive;
@@ -33,10 +41,24 @@ main {
 	color: #FCBDC9;
 }
 
+@media only screen and (max-width: 479px) {
+	.aboutLink {
+		transform: rotate(0deg);
+		text-align: center;
+	}
+}
+
 .aboutBody {
 	font-family: 'Inconsolata', monospace;
 	font-size: x-large;
 	text-align: center;
+}
+
+@media only screen and (max-width: 479px) {
+	.aboutBody {
+		display: block;
+		text-align: center;
+	}
 }
 
 #socialLinks {
@@ -92,6 +114,12 @@ main {
 	text-align: center;
 }
 
+@media only screen and (max-width: 479px) {
+	.grid {
+		display: inline;
+	}
+}
+
 .grid figure {
 	position: relative;
 	float: left;
@@ -103,10 +131,16 @@ main {
 	cursor: pointer;
 }
 
+@media only screen and (max-width: 900px) {
+	.grid figure{
+		min-width: 20px;
+	}
+}
+
 .grid figure img {
 	position: relative;
 	display: block;
-	min-height: 100%;
+	max-height: 100%;
 	max-width: 100%;
 }
 
@@ -165,6 +199,26 @@ figure.overlay img {
 	color: black;
 }
 
+@media (max-width: 479px) {
+  .resizeimg {
+    height: 100px;
+    width: auto;
+  }
+}
+
+@media (max-width: 990px) {
+  .resizeimg {
+    height: auto;
+  }
+}
+
+@media (min-width: 1000px) {
+  .resizeimg {
+    width: auto;
+    height: 350px;
+  }
+}
+
 figure.overlay:hover img {
     opacity:0.1;
     color: black;
@@ -206,6 +260,7 @@ figure.overlay:hover p.icon-links a:first-child {
 	transition-delay: 0.2s;
 }
 
+/* Black box */
 figure.overlay figcaption::before,
 figure.overlay figcaption::after {
 	position: absolute;
@@ -217,6 +272,16 @@ figure.overlay figcaption::after {
 	opacity: 0;
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
+}
+
+@media only screen and (max-width: 900px) {
+	figure.overlay figcaption::before,
+figure.overlay figcaption::after {
+		top: 3px;
+	right: 3px;
+	bottom: 3px;
+	left: 3px;
+	}
 }
 
 figure.overlay figcaption::before {
@@ -250,6 +315,13 @@ figure.overlay p.description {
 	transition: opacity 0.35s, transform 0.35s;
 	-webkit-transform: translate3d(0,20px,0);
 	transform: translate3d(0,20px,0);
+}
+
+@media only screen and (max-width: 900px) {
+	figure.overlay p.description {
+		padding: 0px;
+		font-size: 5px;
+	}
 }
 
 figure.overlay:hover figcaption::before,
@@ -326,6 +398,13 @@ figure.overlay:hover p.description, figure.overlay:hover p.icon-links a {
   text-transform: uppercase;
 }
 
+@media only screen and (max-width: 900px) {
+	.text--sub {
+		font-size: 7px;
+		letter-spacing: 0rem;
+	}
+}
+
 .text--big {
   font-family: 'Poppins', sans-serif;
   font-size: 7.5em;
@@ -334,11 +413,25 @@ figure.overlay:hover p.description, figure.overlay:hover p.icon-links a {
   margin-left: -8px;
 }
 
+@media only screen and (max-width: 900px) {
+	.text--big {
+	  font-size: 1.5em;
+	  line-height: 20px;
+	  margin-left: -8px;
+	}
+}
+
 .text--normal {
   font-size: 13px;
   color: rgba(255, 255, 255, 0.8);
   line-height: 22px;
   margin-top: 25px;
+}
+
+@media only screen and (max-width: 900px) {
+	.text--normal {
+	  font-size: 10px;
+	}
 }
 
 .text__background {
@@ -524,4 +617,31 @@ figure.overlay:hover p.description, figure.overlay:hover p.icon-links a {
 	width: 100%;
 	height: 50px;
 	z-index: 10;
+}
+
+@media only screen and (max-width: 479px) {
+   #nav{
+      width: 905px;
+      position: relative;
+      float: right;
+      margin-left: 500px;
+   }
+
+   #nav ul {
+     list-style: none;
+     padding: 10px 0px 0px 1px;
+     margin: 0;
+   }
+
+   #nav ul li {
+     list-style: none;
+     float: left;
+     padding: 0 0 0 20px;
+     font-weight: normal;
+  }
+
+  .navtext a {
+     font-size:2.2em;
+     padding: 1px 5px 1px 5px; 
+  }
 }
