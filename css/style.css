@@ -27,9 +27,7 @@ main {
 
 @media only screen and (max-width: 900px) {
 	.blogLink {
-		transform: rotate(0deg);
 		text-align: left;
-		font-size: medium;
 	}
 }
 
@@ -48,6 +46,20 @@ main {
 	}
 }
 
+.resumeButton {
+	top: 15px; 
+	left: 140px; 
+	font-size: medium;
+	font-family: 'Inconsolata', monospace;
+}
+
+@media only screen and (max-width: 479px) {
+	.resumeButton{
+		top: 0px; 
+		left: 0px; 
+	}
+}
+
 .aboutBody {
 	font-family: 'Inconsolata', monospace;
 	font-size: x-large;
@@ -58,6 +70,7 @@ main {
 	.aboutBody {
 		display: block;
 		text-align: center;
+		font-size: large;
 	}
 }
 
@@ -65,6 +78,12 @@ main {
 	grid-area: links;
 	list-style-type: none;
 	padding: 90px;
+}
+
+@media only screen and (max-width: 479px) {
+	#socialLinks {
+		padding: 0px;
+	}
 }
 
 .circular--square {
