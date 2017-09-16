@@ -28,7 +28,7 @@ main {
 @media only screen and (max-width: 900px) {
 	.blogLink {
 		transform: rotate(0deg);
-		text-align: center;
+		text-align: left;
 		font-size: medium;
 	}
 }
