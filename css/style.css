@@ -25,9 +25,15 @@ main {
 	transform: rotate(90deg);
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
 	.blogLink {
-		text-align: left;
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 479px) {
+	iframe {
+		display: none;
 	}
 }
 
@@ -41,8 +47,7 @@ main {
 
 @media only screen and (max-width: 479px) {
 	.aboutLink {
-		transform: rotate(0deg);
-		text-align: center;
+		display: none;
 	}
 }
 
@@ -82,7 +87,7 @@ main {
 
 @media only screen and (max-width: 479px) {
 	#socialLinks {
-		padding: 0px;
+		padding: 10px;
 	}
 }
 
@@ -169,6 +174,12 @@ main {
 	font-size: 1.25em;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
+}
+
+@media only screen and (max-width: 479px) {
+	.grid figure figcaption {
+		padding: 10px;
+	}
 }
 
 .grid figure figcaption::before,
@@ -461,6 +472,12 @@ figure.overlay:hover p.description, figure.overlay:hover p.icon-links a {
   color: rgba(0, 0, 0, 0.05);
   font-size: 170px;
   font-weight: 700;
+}
+
+@media only screen and (max-width: 900px) {
+	.text__background {
+	  font-size: 50px;
+	}
 }
 
 .flex__item {
