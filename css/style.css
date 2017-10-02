@@ -51,6 +51,14 @@ main {
 	}
 }
 
+.titles {
+	grid-area: about;
+	font-family: 'Bungee Inline', cursive;
+	font-size: xx-small;
+	text-decoration: underline;
+	color: #FCBDC9;
+}
+
 .resumeButton {
 	top: 15px; 
 	left: 140px; 
