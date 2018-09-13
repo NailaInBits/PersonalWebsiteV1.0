@@ -395,10 +395,29 @@
 	};
 }(window.jQuery);
 
+$(function(){
+	$("#typed").typed({
+		stringsElement: $('#typed-strings'),
+		typeSpeed: 50,
+		backDelay: 2000,
+		loop: true,
+		contentType: 'html', // or text
+		// defaults to false for infinite loop
+		loopCount: false,
+		callback: function(){ foo(); },
+		resetCallback: function() { newTyped(); }
+	});
+	$(".reset").click(function(){
+		$("#typed").typed('reset');
+	});
+});
+function newTyped(){ /* A new typed object */ }
+function foo(){ console.log("Callback"); }
+
 // Etc.me slider
 $("#slideshow > div:gt(0)").hide();
 
-setInterval(function() { 
+setInterval(function() {
 	$('#slideshow > div:first')
 		.fadeOut(1000)
 		.next()
